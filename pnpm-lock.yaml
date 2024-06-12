@@ -24,8 +24,8 @@ dependencies:
     specifier: ^0.11.10
     version: 0.11.10
   randombytes:
-    specifier: github:browserify/randombytes
-    version: github.com/browserify/randombytes/b4eb4126fccc503e375853ca7b3e96aaa34af9e6
+    specifier: github:wlnxing/randombytes
+    version: github.com/wlnxing/randombytes/fa6ca2c38c9067063cdab4651ccb1cb00749f715
   stream-browserify:
     specifier: ^3.0.0
     version: 3.0.0
@@ -3639,8 +3639,10 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  github.com/browserify/randombytes/b4eb4126fccc503e375853ca7b3e96aaa34af9e6:
-    resolution: {tarball: https://codeload.github.com/browserify/randombytes/tar.gz/b4eb4126fccc503e375853ca7b3e96aaa34af9e6}
+  github.com/wlnxing/randombytes/fa6ca2c38c9067063cdab4651ccb1cb00749f715:
+    resolution: {tarball: https://codeload.github.com/wlnxing/randombytes/tar.gz/fa6ca2c38c9067063cdab4651ccb1cb00749f715}
     name: randombytes
     version: 2.1.0
+    dependencies:
+      buffer: 6.0.3
     dev: false

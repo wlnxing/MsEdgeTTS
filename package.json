@@ -39,7 +39,7 @@
         "crypto-browserify": "^3.12.0",
         "isomorphic-ws": "^5.0.0",
         "process": "^0.11.10",
-        "randombytes": "github:browserify/randombytes",
+        "randombytes": "github:wlnxing/randombytes",
         "stream-browserify": "^3.0.0",
         "ws": "^8.14.1"
     },
