@@ -1,7 +1,7 @@
 import axios from "axios";
 import WebSocket from "isomorphic-ws";
 import {Buffer} from "buffer";
-import {randomBytes} from "crypto";
+import randombytes from "randombytes";
 import {OUTPUT_FORMAT} from "./OUTPUT_FORMAT";
 import {Readable} from "stream";
 import * as fs from "fs";
@@ -291,7 +291,7 @@ export class MsEdgeTTS {
     private _rawSSMLRequest(requestSSML: string): {stream: Readable, requestId: string} {
         this._metadataCheck();
 
-        const requestId = randomBytes(16).toString("hex");
+        const requestId = randombytes(16).toString("hex");
         const request = `X-RequestId:${requestId}\r\nContent-Type:application/ssml+xml\r\nPath:ssml\r\n\r\n
                 ` + requestSSML.trim();
         // https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-synthesis-markup

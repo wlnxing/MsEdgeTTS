@@ -30,7 +30,7 @@ exports.MsEdgeTTS = exports.ProsodyOptions = void 0;
 const axios_1 = __importDefault(require("axios"));
 const isomorphic_ws_1 = __importDefault(require("isomorphic-ws"));
 const buffer_1 = require("buffer");
-const crypto_1 = require("crypto");
+const randombytes_1 = __importDefault(require("randombytes"));
 const OUTPUT_FORMAT_1 = require("./OUTPUT_FORMAT");
 const stream_1 = require("stream");
 const fs = __importStar(require("fs"));
@@ -287,7 +287,7 @@ class MsEdgeTTS {
     }
     _rawSSMLRequest(requestSSML) {
         this._metadataCheck();
-        const requestId = (0, crypto_1.randomBytes)(16).toString("hex");
+        const requestId = (0, randombytes_1.default)(16).toString("hex");
         const request = `X-RequestId:${requestId}\r\nContent-Type:application/ssml+xml\r\nPath:ssml\r\n\r\n
                 ` + requestSSML.trim();
         // https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-synthesis-markup
