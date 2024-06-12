@@ -9,7 +9,6 @@
     "module": "./dist/index",
     "main": "./dist/index",
     "scripts": {
-        "preinstall": "npx only-allow pnpm",
         "dev": "yarn run build && ts-node src/test/test.ts",
         "build": "tsc",
         "prepublishOnly": "yarn run build",
